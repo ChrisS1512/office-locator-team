@@ -2,6 +2,7 @@ package com.solirius.hosehackathon.service;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import com.solirius.hosehackathon.errorhandling.CsvHandlingException;
 import com.solirius.hosehackathon.models.Office;
 import com.solirius.hosehackathon.models.OfficeCsv;
 import org.springframework.stereotype.Service;
@@ -14,20 +15,25 @@ import java.util.stream.Collectors;
 @Service
 public class CsvHandlingService {
 
-    public List<Office> officesCsvToList(MultipartFile officesCsv) throws IOException {
+    /**
+     * Handle an incoming csv file and transform it into a list of offices
+     *
+     * @param officesCsv The office csv to convert
+     * @return A list of offices
+     */
+    public List<Office> officesCsvToList(MultipartFile officesCsv) {
         try (InputStreamReader inputStreamReader = new InputStreamReader(officesCsv.getInputStream());
-        Reader reader = new BufferedReader(inputStreamReader)) {
+            Reader reader = new BufferedReader(inputStreamReader)) {
 
             CsvToBean<OfficeCsv> csvToBean = new CsvToBeanBuilder<OfficeCsv>(reader)
                     .withType(OfficeCsv.class)
                     .build();
 
-            List<OfficeCsv> officeCsvList = csvToBean.parse();
+            return csvToBean.parse().stream()
+                    .map(Office::new).collect(Collectors.toList());
 
-            List<Office> listOfOffices = officeCsvList.stream()
-                     .map(Office::new).collect(Collectors.toList());
-
-            return listOfOffices;
+        } catch (IOException ioException) {
+            throw new CsvHandlingException("Unable to parse csv file");
         }
     }
 }

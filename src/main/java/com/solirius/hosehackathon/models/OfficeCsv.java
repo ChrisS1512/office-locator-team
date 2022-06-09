@@ -4,6 +4,9 @@ package com.solirius.hosehackathon.models;
 import com.opencsv.bean.CsvBindByPosition;
 import lombok.Data;
 
+/**
+ * Model to bind csv data
+ */
 @Data
 public class OfficeCsv {
 
