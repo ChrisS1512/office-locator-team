@@ -2,8 +2,6 @@ package com.solirius.hosehackathon.utilities;
 
 import org.springframework.stereotype.Component;
 
-import java.time.Duration;
-
 @Component
 public class Calculate {
 
@@ -13,7 +11,7 @@ public class Calculate {
         double lonDistanceSquared = Math.pow(Math.sin(toRad(lon2 - lon1) / 2), 2);
         double a = latDistanceSquared + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * lonDistanceSquared;
         double c = 2 * Math.asin(Math.sqrt(a));
-//        multiply by radius of the earth in km (roughly 6371km)
+        // multiply by radius of the earth in km (roughly 6371km)
         return 6371.0088 * c;
     }
 

@@ -8,6 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Model to store an office
+ */
 @Entity
 @Data
 @NoArgsConstructor
