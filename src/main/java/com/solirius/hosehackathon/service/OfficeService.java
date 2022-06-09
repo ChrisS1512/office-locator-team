@@ -19,9 +19,12 @@ public class OfficeService {
     @Autowired
     private CsvHandlingService csvHandlingService;
 
-    public String addSingleOffice(Office office) {
-        officeRepository.save(office);
-        return "Saved";
+    public List<Office> getOffices() {
+        return IteratorUtils.toList(officeRepository.findAll().iterator());
+    }
+
+    public Office addSingleOffice(Office office) {
+        return officeRepository.save(office);
     }
 
     public List<Office> addOfficeList(MultipartFile csvFile) throws IOException {

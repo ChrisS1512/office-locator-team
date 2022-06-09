@@ -36,9 +36,17 @@ public class OfficeController {
 
     @ApiResponses({@ApiResponse(code = 200, message = "A message confirming the status of adding the location")})
     @ApiOperation("Add a single office location")
-    @PostMapping("/add/single")
-    public ResponseEntity<String> addOffice(@RequestBody Office office) {
+    @PostMapping
+    public ResponseEntity<Office> addOffice(@RequestBody Office office) {
         return ResponseEntity.ok(officeService.addSingleOffice(office));
+    }
+
+    @ApiResponses({@ApiResponse(code = 200, message = "A message containing the list of office")})
+    @ApiOperation("Gets a list of offices")
+    @GetMapping
+    public ResponseEntity<List<Office>> getOffices() {
+        return ResponseEntity.ok(officeService.getOffices());
+
     }
 
     @ApiResponses({@ApiResponse(code = 200, message = "A message confirming the status of adding the list of locations")})
