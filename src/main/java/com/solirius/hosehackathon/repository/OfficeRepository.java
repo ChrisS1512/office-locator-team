@@ -1,6 +1,6 @@
 package com.solirius.hosehackathon.repository;
 
-import com.solirius.hosehackathon.domain.Office;
+import com.solirius.hosehackathon.models.Office;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
