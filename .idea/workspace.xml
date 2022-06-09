@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db5e6d15-dd0b-4854-a26a-81df54bb6cf7" name="Changes" comment="" />
+    <list default="true" id="db5e6d15-dd0b-4854-a26a-81df54bb6cf7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/OfficeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/OfficeService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +85,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.HoSeHackathonApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tests in 'officelocator'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />

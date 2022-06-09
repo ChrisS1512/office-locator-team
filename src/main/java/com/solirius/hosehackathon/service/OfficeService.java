@@ -1,5 +1,6 @@
 package com.solirius.hosehackathon.service;
 
+import com.solirius.hosehackathon.errorhandling.NotFoundException;
 import com.solirius.hosehackathon.models.Office;
 import com.solirius.hosehackathon.models.OfficeDistance;
 import com.solirius.hosehackathon.repository.OfficeRepository;
@@ -66,6 +67,10 @@ public class OfficeService {
      */
     public OfficeDistance calculateLocation(double latitude, double longitude) {
         Iterable<Office> offices = officeRepository.findAll();
+
+        if (StreamSupport.stream(offices.spliterator(), false).count() == 0) {
+            throw new NotFoundException("No offices has been found");
+        }
 
         List<OfficeDistance> officeDistanceList = StreamSupport.stream(offices.spliterator(), false)
                 .map((office) ->
