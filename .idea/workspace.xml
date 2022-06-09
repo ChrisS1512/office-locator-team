@@ -5,38 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db5e6d15-dd0b-4854-a26a-81df54bb6cf7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/HoSeHackathonApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/controller/OfficeLocatorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/controller/OfficeRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/domain/Office.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/repository/OfficeRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/utilities/Calculate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/cctv_cameras.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fleet list 2020.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/gla-allotment-locations.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/entireframework.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/office.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/traffic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/solirius/hosehackathon/HoSeHackathonApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/solirius/hosehackathon/controller/OfficeRestControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/solirius/hosehackathon/repository/OfficeRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/solirius/hosehackathon/utilities/CalculateTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/office-locator-test.jmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test-offices.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/models/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/controller/OfficeLocatorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/controller/OfficeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/controller/OfficeRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/domain/Office.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/repository/OfficeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/repository/OfficeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/solirius/hosehackathon/controller/OfficeRestControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/solirius/hosehackathon/repository/OfficeRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/solirius/hosehackathon/utilities/CalculateTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,12 +44,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="officelocator" type="f1a62948:ProjectNode" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="officelocator" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,6 +93,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -110,7 +110,7 @@
       <recent name="C:\Users\anton\IdeaProjects\officelocator" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.HoSeHackathonApplication">
     <configuration name="Tests in 'officelocator'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -131,6 +131,13 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="HoSeHackathonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="officelocator.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.solirius.hosehackathon.HoSeHackathonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
