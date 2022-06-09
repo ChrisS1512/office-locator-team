@@ -1,4 +1,4 @@
-FROM amazoncorretto
+FROM amazoncorretto:11
 
 EXPOSE 8080:8080
 ADD build/libs/officelocator-0.0.1-SNAPSHOT.jar officelocator-0.0.1-SNAPSHOT.jar

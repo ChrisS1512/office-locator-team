@@ -31,7 +31,7 @@ public class OfficeController {
     @GetMapping("/find")
     public ResponseEntity<OfficeDistance> findNearestOffice(@RequestParam  double latitude,
                                                             @RequestParam double longitude,
-                                                            @RequestParam(required=false) Boolean miles) {
+                                                            @RequestParam(required=false) boolean miles) {
         OfficeDistance outcome = officeService.calculateLocation(latitude, longitude);
         if (miles) {
             outcome.setOfficeDistance(outcome.getOfficeDistance() * 1.621371);
