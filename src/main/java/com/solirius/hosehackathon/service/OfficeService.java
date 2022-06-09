@@ -55,7 +55,7 @@ public class OfficeService {
      * @return A list of the offices that have been added
      * @throws IOException
      */
-    public List<Office> addOfficeList(MultipartFile csvFile) throws IOException {
+    public List<Office> addOfficeList(MultipartFile csvFile){
         return IteratorUtils.toList(officeRepository.saveAll( csvHandlingService.officesCsvToList(csvFile)).iterator());
     }
 

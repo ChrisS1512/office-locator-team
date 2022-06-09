@@ -48,7 +48,7 @@ public class OfficeController {
     @ApiResponses({@ApiResponse(code = 200, message = "A list of the offices that have been added")})
     @ApiOperation("Add a list of office locations")
     @PostMapping("/add/list")
-    public ResponseEntity<List<Office>> addListOfOffices(@RequestPart MultipartFile officesCsv) throws IOException {
+    public ResponseEntity<List<Office>> addListOfOffices(@RequestPart MultipartFile officesCsv) {
         return ResponseEntity.ok(officeService.addOfficeList(officesCsv));
     }
 }

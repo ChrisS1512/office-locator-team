@@ -2,6 +2,7 @@ package com.solirius.hosehackathon.service;
 
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
+import com.solirius.hosehackathon.errorhandling.CsvHandlingException;
 import com.solirius.hosehackathon.models.Office;
 import com.solirius.hosehackathon.models.OfficeCsv;
 import org.springframework.stereotype.Service;
@@ -19,9 +20,8 @@ public class CsvHandlingService {
      *
      * @param officesCsv The office csv to convert
      * @return A list of offices
-     * @throws IOException
      */
-    public List<Office> officesCsvToList(MultipartFile officesCsv) throws IOException {
+    public List<Office> officesCsvToList(MultipartFile officesCsv) {
         try (InputStreamReader inputStreamReader = new InputStreamReader(officesCsv.getInputStream());
             Reader reader = new BufferedReader(inputStreamReader)) {
 
@@ -32,6 +32,8 @@ public class CsvHandlingService {
             return csvToBean.parse().stream()
                     .map(Office::new).collect(Collectors.toList());
 
+        } catch (IOException ioException) {
+            throw new CsvHandlingException("Unable to parse csv file");
         }
     }
 }

@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db5e6d15-dd0b-4854-a26a-81df54bb6cf7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/OfficeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/OfficeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/errorhandling/ExceptionResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/errorhandling/ExceptionResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +82,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\anton\IdeaProjects\officelocator\src\main\java\com\solirius\hosehackathon" />
       <recent name="C:\Users\anton\IdeaProjects\officelocator" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.solirius.hosehackathon.errorhandling" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.HoSeHackathonApplication">
