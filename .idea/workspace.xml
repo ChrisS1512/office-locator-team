@@ -6,12 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="db5e6d15-dd0b-4854-a26a-81df54bb6cf7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/controller/OfficeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/controller/OfficeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/models/Office.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/models/Office.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/models/OfficeCsv.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/models/OfficeCsv.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/models/OfficeDistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/models/OfficeDistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/LocationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/LocationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/repository/OfficeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/repository/OfficeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/CsvHandlingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/CsvHandlingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/LocationService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/OfficeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/service/OfficeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/utilities/Calculate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/solirius/hosehackathon/utilities/Calculate.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

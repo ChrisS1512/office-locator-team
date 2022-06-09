@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * Class which captures the office, and it's distance from the current location
+ * Model which captures the office, and it's distance from the current location
  */
 @Data
 @AllArgsConstructor
