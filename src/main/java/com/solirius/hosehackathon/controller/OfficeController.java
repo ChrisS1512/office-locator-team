@@ -16,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.List;
 
+
 @RestController
 @Api(tags = "Offices API")
 @RequestMapping("/offices")
@@ -28,10 +29,17 @@ public class OfficeController {
     private LocationService locationService;
 
     @ApiResponses({@ApiResponse(code = 200, message = "The nearest office string has been returned")})
-    @ApiOperation("Find the nearest office to the supplied latitude and longitude")
+    @ApiOperation("Find the nearest office to the supplied latitude and longitude along with the distance in either" +
+            "miles or kilometres")
     @GetMapping("/find")
-    public ResponseEntity<OfficeDistance> findNearestOffice(@RequestParam  double latitude, @RequestParam double longitude) {
-        return ResponseEntity.ok(locationService.calculateLocation(latitude, longitude));
+    public ResponseEntity<OfficeDistance> findNearestOffice(@RequestParam  double latitude,
+                                                            @RequestParam double longitude,
+                                                            @RequestParam(required=false) Boolean miles) {
+        OfficeDistance outcome = locationService.calculateLocation(latitude, longitude);
+        if (miles) {
+            outcome.setOfficeDistance(outcome.getOfficeDistance() * 1.621371);
+        }
+        return ResponseEntity.ok(outcome);
     }
 
     @ApiResponses({@ApiResponse(code = 200, message = "A message confirming the status of adding the location")})
