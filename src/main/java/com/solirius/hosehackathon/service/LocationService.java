@@ -22,7 +22,7 @@ public class LocationService {
     OfficeRepository officeRepository;
 
     /**
-     * Takes in a latitude and longatude of the current location, and returns the nearest office.
+     * Takes in a latitude and longitude of the current location, and returns the nearest office.
      *
      * @param latitude The latitude of the current location.
      * @param longitude The longitude of the current location.

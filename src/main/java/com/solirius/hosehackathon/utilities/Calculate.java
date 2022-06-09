@@ -19,13 +19,10 @@ public class Calculate {
 
     public double distance(double lat1, double lon1, double lat2, double lon2) {
         //Calculate distance
-        Double latDistanceSquared = Math.sin(toRad(lat2 - lat1) / 2) * Math.sin(toRad(lat2 - lat1) / 2);
-        Double lonDistanceSquared = Math.sin(toRad(lon2 - lon1) / 2) * Math.sin(toRad(lon2 - lon1) / 2);
-        Double lat1Cos = Math.cos(toRad(lat1));
-        Double lat2Cos = Math.cos(toRad(lat2));
-        Double a = latDistanceSquared + lat1Cos * lat2Cos * lonDistanceSquared;
+        Double latDistanceSquared = Math.pow(Math.sin(toRad(lat2 - lat1) / 2), 2);
+        Double lonDistanceSquared = Math.pow(Math.sin(toRad(lon2 - lon1) / 2), 2);
+        Double a = latDistanceSquared + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * lonDistanceSquared;
         Double c = 2 * Math.asin(Math.sqrt(a));
-
 //        multiply by radius of the earth in km (roughly 6371km)
         return 6371.0088 * c;
     }
