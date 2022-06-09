@@ -1,4 +1,4 @@
-package com.solirius.hosehackathon.domain;
+package com.solirius.hosehackathon.models;
 
 /**
  * Class which captures the office, and it's distance from the current location

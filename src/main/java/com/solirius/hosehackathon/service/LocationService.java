@@ -1,7 +1,7 @@
 package com.solirius.hosehackathon.service;
 
-import com.solirius.hosehackathon.domain.Office;
-import com.solirius.hosehackathon.domain.OfficeDistance;
+import com.solirius.hosehackathon.models.Office;
+import com.solirius.hosehackathon.models.OfficeDistance;
 import com.solirius.hosehackathon.repository.OfficeRepository;
 import com.solirius.hosehackathon.utilities.Calculate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +27,7 @@ public class LocationService {
      * @param latitude The latitude of the current location.
      * @param longitude The longitude of the current location.
      */
-    public Office calculateLocation(double latitude, double longitude) {
+    public OfficeDistance calculateLocation(double latitude, double longitude) {
         Iterable<Office> offices = officeRepository.findAll();
 
         List<OfficeDistance> officeDistanceList = StreamSupport.stream(offices.spliterator(), false)
@@ -36,7 +36,7 @@ public class LocationService {
                                 calculate.distance(latitude, longitude, office.getLatitude(), office.getLongitude()))
                 ).sorted(Comparator.comparing(OfficeDistance::getOfficeDistance)).collect(Collectors.toList());
 
-        return officeDistanceList.get(0).getOffice();
+        return officeDistanceList.get(0);
     }
 
 
