@@ -69,7 +69,7 @@ public class OfficeService {
         Iterable<Office> offices = officeRepository.findAll();
 
         if (StreamSupport.stream(offices.spliterator(), false).count() == 0) {
-            throw new NotFoundException("No offices has been found");
+            throw new NotFoundException("No offices have been found");
         }
 
         List<OfficeDistance> officeDistanceList = StreamSupport.stream(offices.spliterator(), false)

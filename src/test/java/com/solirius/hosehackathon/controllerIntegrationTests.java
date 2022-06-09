@@ -8,6 +8,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -28,13 +29,13 @@ class controllerIntegrationTests {
         assertEquals(ROOT_CONTROLLER_RESPONSE, response.getResponse().getContentAsString());
     }
 
-    @DisplayName("Should return data when sent to find endpoint")
+    @DisplayName("Should return not and 404 when sent to find endpoint with no data in it")
     @Test
     void findEndpoint() throws Exception{
         MvcResult response = mockMvc.perform(get("/offices/find/")
                 .param("latitude", "55.4432")
                 .param("longitude", "-1.3453"))
-                .andExpect(status().isOk()).andReturn();
-        assertEquals("hello", response.getResponse().getContentAsString());
+                .andExpect(status().isNotFound()).andReturn();
+        assertTrue(response.getResponse().getContentAsString().contains("No offices have been found"));
     }
 }
