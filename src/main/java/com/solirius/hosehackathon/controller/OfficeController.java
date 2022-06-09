@@ -2,7 +2,6 @@ package com.solirius.hosehackathon.controller;
 
 import com.solirius.hosehackathon.models.Office;
 import com.solirius.hosehackathon.models.OfficeDistance;
-import com.solirius.hosehackathon.service.LocationService;
 import com.solirius.hosehackathon.service.OfficeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,24 +23,21 @@ public class OfficeController {
     @Autowired
     private OfficeService officeService;
 
-    @Autowired
-    private LocationService locationService;
-
     @ApiResponses({@ApiResponse(code = 200, message = "The nearest office string has been returned")})
     @ApiOperation("Find the nearest office to the supplied latitude and longitude")
     @GetMapping("/find")
     public ResponseEntity<OfficeDistance> findNearestOffice(@RequestParam  double latitude, @RequestParam double longitude) {
-        return ResponseEntity.ok(locationService.calculateLocation(latitude, longitude));
+        return ResponseEntity.ok(officeService.calculateLocation(latitude, longitude));
     }
 
-    @ApiResponses({@ApiResponse(code = 200, message = "A message confirming the status of adding the location")})
+    @ApiResponses({@ApiResponse(code = 200, message = "The office that has been added")})
     @ApiOperation("Add a single office location")
     @PostMapping("/add/single")
-    public ResponseEntity<String> addOffice(@RequestBody Office office) {
+    public ResponseEntity<Office> addOffice(@RequestBody Office office) {
         return ResponseEntity.ok(officeService.addSingleOffice(office));
     }
 
-    @ApiResponses({@ApiResponse(code = 200, message = "A message confirming the status of adding the list of locations")})
+    @ApiResponses({@ApiResponse(code = 200, message = "A list of the offices that have been added")})
     @ApiOperation("Add a list of office locations")
     @PostMapping("/add/list")
     public ResponseEntity<List<Office>> addListOfOffices(@RequestPart MultipartFile officesCsv) throws IOException {
