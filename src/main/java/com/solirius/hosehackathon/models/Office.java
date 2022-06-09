@@ -1,6 +1,7 @@
 package com.solirius.hosehackathon.models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Office {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -35,4 +37,19 @@ public class Office {
     private boolean printing;
 
     private boolean shower;
+
+
+    public Office(OfficeCsv officeCsv) {
+        this.latitude = officeCsv.getLatitude();
+        this.longitude = officeCsv.getLongitude();
+        this.name = officeCsv.getName();
+        this.wifi = officeCsv.isWifi();
+        this.extendedAccess = officeCsv.isExtendedAccess();
+        this.meetingRooms = officeCsv.isMeetingRooms();
+        this.kitchen = officeCsv.isKitchen();
+        this.breakArea = officeCsv.isBreakArea();
+        this.petFriendly = officeCsv.isPetFriendly();
+        this.printing = officeCsv.isPrinting();
+        this.shower = officeCsv.isShower();
+    }
 }

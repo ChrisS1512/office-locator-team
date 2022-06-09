@@ -11,6 +11,10 @@ import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
+import java.util.List;
 
 @RestController
 @Api(tags = "Offices API")
@@ -40,7 +44,7 @@ public class OfficeController {
     @ApiResponses({@ApiResponse(code = 200, message = "A message confirming the status of adding the list of locations")})
     @ApiOperation("Add a list of office locations")
     @PostMapping("/add/list")
-    public ResponseEntity<String> addListOfOffices() {
-        return ResponseEntity.ok("Add list of offices");
+    public ResponseEntity<List<Office>> addListOfOffices(@RequestPart MultipartFile officesCsv) throws IOException {
+        return ResponseEntity.ok(officeService.addOfficeList(officesCsv));
     }
 }
