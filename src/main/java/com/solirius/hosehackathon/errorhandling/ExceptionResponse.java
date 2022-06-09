@@ -10,7 +10,7 @@ public class ExceptionResponse {
     /*
     The error message to return
     */
-    private  String message;
+    private String message;
 
     /*
     The timestamp when error occurs
